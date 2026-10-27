@@ -1,1 +1,46 @@
+"""
+Weather Classifier Project
+Author: Faranak Moayeri
+Description: A simple interactive Python script to classify weather temperatures.
+"""
+
+
+def get_temperature():
+    print("=" * 45)
+    print("  Welcome to the Weather Classifier App! 🌤️")
+    print("  (Type 'exit' or 'quit' anytime to stop)")
+    print("=" * 45)
+
+    while True:
+        user_input = input("\nEnter the current temperature in °C: ").strip()
+
+        # Check if user wants to exit
+        if user_input.lower() in ['exit', 'quit']:
+            print("Goodbye! Have a great day! 👋")
+            break
+
+        try:
+            # Convert input to float to support decimal temperatures (e.g., 22.5)
+            temp = float(user_input)
+
+            # Temperature classification logic
+            if 0 <= temp < 10:
+                print(f"➡️ {temp}°C | Weather status: Very Cold 🥶")
+            elif 10 <= temp <= 19:
+                print(f"➡️ {temp}°C | Weather status: Cold 🧥")
+            elif 20 <= temp <= 25:
+                print(f"➡️ {temp}°C | Weather status: Good / Pleasant 😊")
+            elif 26 <= temp <= 40:
+                print(f"➡️ {temp}°C | Weather status: Hot ☀️")
+            elif 41 <= temp <= 50:
+                print(f"➡️ {temp}°C | Weather status: Very Hot 🥵")
+            else:
+                print("⚠️ Error: Temperature must be between 0 and 50 degrees Celsius!")
+
+        except ValueError:
+            print("⚠️ Error: Please enter a valid number!")
+
+
+# Run the program directly
+get_temperature()
 
