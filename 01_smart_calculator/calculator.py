@@ -1,15 +1,18 @@
+"""
+Smart Calculator
+Author: Faranak Moayeri
+Description: A simple calculator for basic arithmetic operations.
+"""
 
 # Adds two numbers.
 def add(a, b):
     return a + b
 
 # Subtracts the second number from the first.
-
 def subtract(a, b):
     return a - b
 
 # Multiplies two numbers.
-
 def multiply(a, b):
     return a * b
 
